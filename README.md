@@ -1,7 +1,3 @@
-Perfeito 👍
-Segue um **README.md** explicando **a funcionalidade do bot**, focado em **o que ele faz, como funciona a lógica e como configurar**, baseado exatamente no código que você enviou.
-
----
 
 # 🤖 Bot de Rodízio de Code Review (Discord)
 
