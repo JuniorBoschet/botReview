@@ -13,6 +13,10 @@ const client = new Client({
 
 const TIMEZONE = 'America/Sao_Paulo';
 
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000; 
+
 const START_DATE = new Date(config.startDate);
 const TEAMS = config.teams.map(team => team.map(id => BigInt(id)));
 const NOTIFY_CHANNEL_ID = BigInt(config.channelId);
@@ -76,6 +80,14 @@ const HOLIDAYS = [
   '2029-11-20',
   '2029-12-25',
 ];
+
+app.get('/', (req, res) => {
+  res.send('🤖 Bot de Code Review online e funcionando! 🚀');
+});
+
+app.listen(PORT, () => {
+  console.log(`🌐 Servidor HTTP rodando na porta ${PORT} para manter o Render acordado`);
+});
 
 function getTodayInBrazil() {
   return toZonedTime(new Date(), TIMEZONE);
